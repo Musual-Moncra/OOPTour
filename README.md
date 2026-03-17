@@ -35,9 +35,9 @@ Hành trình của chúng tôi xoay quanh 4 trụ cột vĩ đại của OOP:
 ## 👥 Đội Ngũ Phi Hành Gia (The Crew)
 Dưới đây là những "chiến binh" đang trên con đường master Java:
 
-*   **[Nguyễn Thái Bảo](./src/Nguyễn%20Thái%20Bảo)** - ⚡ Chuyên gia Lab001
-*   **[Sỳ Chí Khởi](./src/Sỳ%20Chí%20Khởi)** - 🧪 Template Explorer
-*   **[Trần Thành Đạt](./src/Trần%20Thành%20Đạt)** - 🛠️ Kiến trúc sư hệ thống
+*   **[Nguyễn Thái Bảo](./src/Nguyễn%20Thái%20Bảo)** - 
+*   **[Sỳ Chí Khởi](./src/Sỳ%20Chí%20Khởi)** - 
+*   **[Trần Thành Đạt](./src/Trần%20Thành%20Đạt)** - 
 
 ---
 
