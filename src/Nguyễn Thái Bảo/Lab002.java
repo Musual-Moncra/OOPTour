@@ -15,8 +15,14 @@ public class Lab002 {
         System.out.println("Question 01");
         Question01(sc);
 
-        System.out.print("Question 02");
+        System.out.println("\nQuestion 02");
         Question02(sc);
+
+        System.out.println("\nQuestion 03");
+        Question03(sc);
+
+        System.out.println("\nQuestion 04");
+        Question04(sc);
 
         sc.close();
     }
@@ -37,14 +43,23 @@ public class Lab002 {
         System.out.print("Nhập cạnh c: ");
         c = sc.nextDouble();
 
-        if (a == b && b == c && a == c) {
+        // Kiểm tra tính chất tam giác (Tổng 2 cạnh lớn hơn cạnh còn lại)
+        if (a + b <= c || a + c <= b || b + c <= a) {
+            System.out.println("Không phải là tam giác");
+            return;
+        }
+
+        boolean isRight = (a * a + b * b == c * c) || (a * a + c * c == b * b) || (b * b + c * c == a * a);
+        boolean isIsosceles = (a == b) || (a == c) || (b == c);
+
+        if (a == b && b == c) {
             System.out.println("Tam giác đều");
-        } else if (a == b && (c * c == a * a + b * b)) {
+        } else if (isRight && isIsosceles) {
             System.out.println("Tam giác vuông cân");
-        } else if (a == b || a == c || b == c) {
-            System.out.println("Tam giác cân");
-        } else if (a * a + b * b == c * c || a * a + c * c == b * b || b * b + c * c == a * a) {
+        } else if (isRight) {
             System.out.println("Tam giác vuông");
+        } else if (isIsosceles) {
+            System.out.println("Tam giác cân");
         } else {
             System.out.println("Tam giác thường");
         }
@@ -96,5 +111,56 @@ public class Lab002 {
                 System.out.println("Thứ Bảy");
                 break;
         }
+    }
+
+    public static void Question03(Scanner sc) {
+        System.out.print("Nhập năm dương lịch (sau 1900): ");
+        int namDuongLich = sc.nextInt();
+
+        if (namDuongLich < 1900) {
+            System.out.println("Vui lòng nhập năm lớn hơn hoặc bằng 1900!");
+            return;
+        }
+
+        String[] dsCan = { "Canh", "Tân", "Nhâm", "Quý", "Giáp", "Ất", "Bính", "Đinh", "Mậu", "Kỷ" };
+        String[] dsChi = { "Tý", "Sửu", "Dần", "Mão", "Thìn", "Tỵ", "Ngọ", "Mùi", "Thân", "Dậu", "Tuất", "Hợi" };
+
+        int a = (namDuongLich - 1900) % 10;
+        int b = (namDuongLich - 1900) % 12;
+
+        System.out.println("-------------------------------------------");
+        System.out.println("Năm " + namDuongLich + " là năm: " + dsCan[a] + " " + dsChi[b]);
+        System.out.println("-------------------------------------------");
+    }
+
+    public static void Question04(Scanner sc) {
+        System.out.print("Nhập số nguyên dương N: ");
+        int n = sc.nextInt();
+
+        // N là số dương
+        if (n <= 0) {
+            System.out.println("Vui lòng nhập N > 0!");
+            return;
+        }
+
+        int s1 = 0; // S1: Tổng các số nguyên
+        long s2 = 1; // S2: Tích giai thừa
+        double s3 = 0; // S3: Tổng phân số đơn
+        double s4 = 0; // S4: Tổng phân số phức hợp
+
+        for (int i = 1; i <= n; i++) {
+            s1 += i;
+            s2 *= i;
+            s3 += 1.0 / i;
+            s4 += 1.0 / (i * (i + 1));
+        }
+
+        System.out.println("-------------------------------------------");
+        System.out.println("Kết quả với N = " + n + ":");
+        System.out.println("S1 = " + s1);
+        System.out.println("S2 = " + s2);
+        System.out.printf("S3 = %.3f\n", s3);
+        System.out.printf("S4 = %.3f\n", s4);
+        System.out.println("-------------------------------------------");
     }
 }
