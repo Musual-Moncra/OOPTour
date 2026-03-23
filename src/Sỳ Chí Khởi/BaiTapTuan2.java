@@ -2,10 +2,11 @@
 package baitaptuan2;
 import java.util.Scanner;
 /*
-    Sy Chi Khoi-Molten
+    Sy Chi Khoi
     MSSV:22502168
-    +3/17/2026- done cau 1
+    +3/17/2026-done cau 1
     +3/19/2026-done cau 2 3 4
+    +3/23/2026-done cau 5 6
  */
 public class BaiTapTuan2 {
 
@@ -17,7 +18,9 @@ public class BaiTapTuan2 {
         //Cau1();
         //Cau2();
         //Cau3();
-        Cau4();
+        //Cau4();
+        //Cau5();
+        Cau6();
     }
 
     
@@ -173,5 +176,53 @@ public class BaiTapTuan2 {
     System.out.printf("S3 = %.3f\n", s3); // Sử dụng printf để giới hạn 3 chữ số sau dấu phẩy cho số thực
     System.out.printf("S4 = %.3f\n", s4);
     System.out.println("-------------------------------------------");
+    }
+    
+    public static void Cau5()
+    {
+        int n =0;
+        int tong=0;
+        while (true){
+            n++;
+            tong+=n;
+            if (tong>=200){
+                break;
+            }
+        }
+        System.out.println("N min la: "+n );
+        System.out.println("Tong la: "+tong);
+    }
+    
+    public static void Cau6() {
+        int chon;
+        do {
+            System.out.println("\n========== MENU BAI TAP TUAN 2 ==========");
+            System.out.println("1. Cau 1");
+            System.out.println("2. Cau 2");
+            System.out.println("3. Cau 3");
+            System.out.println("4. Cau 4");
+            System.out.println("5. Cau 5");
+            System.out.println("0. Thoat chuong trinh (Sayonara!)");
+            System.out.print("Moi ban chon (0-5): ");
+            
+            chon = sc.nextInt();
+
+            switch (chon) {
+                case 1 -> Cau1();
+                case 2 -> Cau2();
+                case 3 -> Cau3();
+                case 4 -> Cau4();
+                case 5 -> Cau5();
+                case 0 -> System.out.println("Tam biet! Chuong trinh ket thuc.");
+                default -> System.out.println("Lua chon khong hop le. Vui long nhap lai!");
+            }
+            
+            if (chon != 0) {
+                System.out.println("\nNhan Enter de tiep tuc...");
+                sc.nextLine(); // xoa cache
+                sc.nextLine(); // enter
+            }
+            
+        } while (chon != 0);
     }
 }
