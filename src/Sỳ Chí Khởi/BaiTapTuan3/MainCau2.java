@@ -13,9 +13,7 @@ public class MainCau2 {
         sv2.nhap();
 
         // 3. Xuất thông tin cả 2 sinh viên
-        System.out.println("\n========== KET QUA ==========");
         sv1.xuat();
         sv2.xuat();
-        System.out.println("=============================");
     }
 }
