@@ -1,10 +1,10 @@
 package baitaptuan3;
 
 import java.util.Scanner;
-import java.time.LocalDate; // Dùng thư viện này để lấy năm hiện tại chính xác nhất
+import java.time.LocalDate; // Dùng lib này để lấy năm hiện tại mà không cần phải chỉnh sửa code mỗi năm
 
 public class SinhVien {
-    // Thuộc tính (nên để public theo yêu cầu bài tập cơ bản)
+    // Thuộc tính 
     public String maSo;
     public String hoTen;
     public int namSinh;
@@ -33,7 +33,7 @@ public class SinhVien {
 
     // Hàm tính tuổi
     public int tinhTuoi() {
-        int namHienTai = LocalDate.now().getYear(); // Lấy năm từ hệ thống (2026)
+        int namHienTai = LocalDate.now().getYear(); // Lấy năm từ hệ thống
         return namHienTai - namSinh;
     }
 
