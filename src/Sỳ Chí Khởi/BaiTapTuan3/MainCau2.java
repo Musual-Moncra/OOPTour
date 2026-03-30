@@ -4,7 +4,7 @@ public class MainCau2 {
     public static void main(String[] args) {
         // 1. Tạo đối tượng dùng Constructor 3 tham số
         // Dữ liệu được truyền thẳng vào lúc tạo mới (new)
-        SinhVien sv1 = new SinhVien("22502168", "Sy Chi Khoi", 2004);
+        SinhVien sv1 = new SinhVien("22502168", "Sy Chi Khoi", 2007);
 
         // 2. Tạo đối tượng dùng Constructor 0 tham số
         SinhVien sv2 = new SinhVien();
