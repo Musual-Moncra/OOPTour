@@ -5,8 +5,7 @@ import java.util.Scanner;
 public class QuanLySach {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Sach[] ds = null; // Khởi tạo mảng rỗng ban đầu
-        int n = 0;
+        Sach[] ds = null; 
         int luaChon;
 
         do {
@@ -20,20 +19,35 @@ public class QuanLySach {
             System.out.print("Moi ban chon chuc nang: ");
             
             luaChon = sc.nextInt();
-            sc.nextLine(); // Xóa bộ đệm sau khi chọn menu
+            sc.nextLine(); 
 
             switch (luaChon) {
                 case 1:
-                    System.out.print("Nhap so luong sach can them (N): ");
-                    n = sc.nextInt();
-                    sc.nextLine();
-                    
-                    ds = new Sach[n];
-                    for (int i = 0; i < n; i++) {
-                        System.out.println("   Nhap thong tin sach thu " + (i + 1) + "   ");
-                        ds[i] = new Sach();
-                        ds[i].nhap(sc);
-                    }
+                    ds = Sach.nhapDanhSach(sc);
+                    break;
+                case 2:
+                    Sach.xuatDanhSach(ds);
+                    break;
+                case 3:
+                    Sach.sapXepTheoTen(ds);
+                    break;
+                case 4:
+                    Sach.sapXepTheoSoTrang(ds);
+                    break;
+                case 5:
+                    System.out.print("Nhap ten sach can tim: ");
+                    String tenCanTim = sc.nextLine();
+                    Sach.timKiemTheoTen(ds, tenCanTim);
+                    break;
+                default:
+                    System.out.println("Da thoat chuong trinh quan ly sach.");
+                    break;
+            }
+        } while (luaChon >= 1 && luaChon <= 5);
+        
+        sc.close();
+    }
+}
                     break;
 
                 case 2:
