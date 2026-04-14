@@ -10,6 +10,7 @@ public class LopThiSinh {
     private double diemMon3;
     private boolean hsGioi;
     private boolean doiTuongUuTien;
+    private Scanner sc = new Scanner(System.in);
 
     public LopThiSinh() {
     }
@@ -30,7 +31,6 @@ public class LopThiSinh {
     }
 
     public void nhap() {
-        Scanner sc = new Scanner(System.in);
         System.out.print("Nhap ho ten: ");
         hoTen = sc.nextLine();
         System.out.print("Nhap so bao danh: ");
