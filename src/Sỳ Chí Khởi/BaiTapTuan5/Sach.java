@@ -1,5 +1,7 @@
 package baitaptuan5;
 
+import java.util.Scanner;
+
 public class Sach {
     private String tenSach;
     private String tacGia;
@@ -16,36 +18,33 @@ public class Sach {
         this.soTrang = soTrang;
     }
 
-    public String getTenSach() {
-        return tenSach;
-    }
+    public String getTenSach() { return tenSach; }
+    public void setTenSach(String tenSach) { this.tenSach = tenSach; }
 
-    public void setTenSach(String tenSach) {
-        this.tenSach = tenSach;
-    }
+    public String getTacGia() { return tacGia; }
+    public void setTacGia(String tacGia) { this.tacGia = tacGia; }
 
-    public String getTacGia() {
-        return tacGia;
-    }
+    public int getNamXuatBan() { return namXuatBan; }
+    public void setNamXuatBan(int namXuatBan) { this.namXuatBan = namXuatBan; }
 
-    public void setTacGia(String tacGia) {
-        this.tacGia = tacGia;
-    }
+    public int getSoTrang() { return soTrang; }
+    public void setSoTrang(int soTrang) { this.soTrang = soTrang; }
 
-    public int getNamXuatBan() {
-        return namXuatBan;
-    }
-
-    public void setNamXuatBan(int namXuatBan) {
-        this.namXuatBan = namXuatBan;
-    }
-
-    public int getSoTrang() {
-        return soTrang;
-    }
-
-    public void setSoTrang(int soTrang) {
-        this.soTrang = soTrang;
+    // Bổ sung hàm nhập dữ liệu cho 1 cuốn sách
+    public void nhap(Scanner sc) {
+        System.out.print("Nhap ten sach: ");
+        this.tenSach = sc.nextLine();
+        
+        System.out.print("Nhap tac gia: ");
+        this.tacGia = sc.nextLine();
+        
+        System.out.print("Nhap nam xuat ban: ");
+        this.namXuatBan = sc.nextInt();
+        
+        System.out.print("Nhap so trang: ");
+        this.soTrang = sc.nextInt();
+        
+        sc.nextLine(); // Xóa bộ đệm chống trôi lệnh
     }
 
     public void output() {
