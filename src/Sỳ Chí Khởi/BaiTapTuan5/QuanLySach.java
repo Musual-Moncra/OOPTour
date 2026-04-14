@@ -4,11 +4,11 @@ public class QuanLySach {
     public static void main(String[] args) {
         Sach[] ds = new Sach[5];
         
-        ds[0] = new Sach("Head First Java", "Kathy Sierra", 2005, 720);
-        ds[1] = new Sach("Clean Code", "Robert C. Martin", 2008, 464);
-        ds[2] = new Sach("Nihongo Sou Matome N3", "Sasaki Hitoko", 2010, 160);
-        ds[3] = new Sach("Toan Roi Rac", "Nguyen Duc Nghia", 2019, 350);
-        ds[4] = new Sach("Ky Nang Lap Trinh BrSE", "Nhieu Tac Gia", 2024, 250);
+        ds[0] = new Sach("Sach1", "A", 2005, 720);
+        ds[1] = new Sach("Sach2", "B", 2008, 464);
+        ds[2] = new Sach("Sach3", "C", 2010, 160);
+        ds[3] = new Sach("Sach4", "D", 2019, 350);
+        ds[4] = new Sach("Sach5", "E", 2024, 250);
 
         System.out.println("   DANH SACH 5 CUON SACH BAN DAU   ");
         for (Sach s : ds) {
