@@ -7,17 +7,12 @@ public class TruongDaiHoc {
     private double diemChuan;
 
     public TruongDaiHoc(String tenTruong, double diemChuan) {
-        this.tenTruong   tenTruong;
-        this.diemChuan   diemChuan;
+        this.tenTruong = tenTruong;
+        this.diemChuan = diemChuan;
     }
 
-    public String getTenTruong() {
-        return tenTruong;
-    }
-
-    public double getDiemChuan() {
-        return diemChuan;
-    }
+    public String getTenTruong() { return tenTruong; }
+    public double getDiemChuan() { return diemChuan; }
 
     public void xetTuyen(ThiSinh ts) {
         if (ts.tinhDiemXetTuyen() >= diemChuan && !ts.kiemTraDiemLiet()) {
