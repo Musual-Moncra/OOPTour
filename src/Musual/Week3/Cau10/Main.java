@@ -1,26 +1,30 @@
-package main;
+package Week3.Cau10;
 
 import java.util.Scanner;
 
-import thisinh.DanhSachTS;
-import truongdaihoc.TruongDaiHoc;
+
 
 /**
  * Lớp Main — điểm vào (entry point) của chương trình tuyển sinh.
  *
- * <p>Luồng chạy:</p>
+ * <p>
+ * Luồng chạy:
+ * </p>
  * <ol>
- *   <li>Khởi tạo {@link DanhSachTS} (tự nạp 2 thí sinh cố định).</li>
- *   <li>Cho người dùng nhập thêm thí sinh từ bàn phím.</li>
- *   <li>Khởi tạo {@link TruongDaiHoc} (HSU, điểm chuẩn 15.0).</li>
- *   <li>Gọi xetTuyenTongHop() — in bảng kết quả toàn bộ.</li>
- *   <li>Gọi xuatDanhSachTrungTuyen() — in danh sách trúng tuyển cuối.</li>
+ * <li>Khởi tạo {@link DanhSachTS} (tự nạp 2 thí sinh cố định).</li>
+ * <li>Cho người dùng nhập thêm thí sinh từ bàn phím.</li>
+ * <li>Khởi tạo {@link TruongDaiHoc} (HSU, điểm chuẩn 15.0).</li>
+ * <li>Gọi xetTuyenTongHop() — in bảng kết quả toàn bộ.</li>
+ * <li>Gọi xuatDanhSachTrungTuyen() — in danh sách trúng tuyển cuối.</li>
  * </ol>
  *
- * <p><b>Tối ưu so với bản gốc:</b></p>
+ * <p>
+ * <b>Tối ưu so với bản gốc:</b>
+ * </p>
  * <ul>
- *   <li>Đóng Scanner trong khối finally để đảm bảo giải phóng tài nguyên dù có lỗi.</li>
- *   <li>Thêm tiêu đề rõ ràng cho từng bước.</li>
+ * <li>Đóng Scanner trong khối finally để đảm bảo giải phóng tài nguyên dù có
+ * lỗi.</li>
+ * <li>Thêm tiêu đề rõ ràng cho từng bước.</li>
  * </ul>
  */
 public class Main {
