@@ -30,6 +30,10 @@ public class LopThiSinh {
         return hoTen;
     }
 
+    public void setHoTen(String hoTen) {
+        this.hoTen = hoTen;
+    }
+
     public void nhap() {
         System.out.print("Nhap ho ten: ");
         hoTen = sc.nextLine();
@@ -57,6 +61,7 @@ public class LopThiSinh {
 
     public void xuat() {
         System.out.println(
-                "Ho ten: " + hoTen + " | Diem XT: " + tinhDiemXetTuyen() + " | Diem Liet: " + kiemTraDiemLiet());
+                "Ho ten: " + hoTen + "|So bao danh" + SBD + " Diem XT: " + tinhDiemXetTuyen() + " | Diem Liet: "
+                        + kiemTraDiemLiet());
     }
 }
