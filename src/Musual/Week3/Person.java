@@ -1,4 +1,4 @@
-package Musual.Week3;
+package Week3;
 
 import java.util.Scanner;
 

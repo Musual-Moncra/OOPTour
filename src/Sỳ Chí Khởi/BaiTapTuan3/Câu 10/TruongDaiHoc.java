@@ -11,11 +11,14 @@ public class TruongDaiHoc {
         this.diemChuan = diemChuan;
     }
 
+    public String getTenTruong() { return tenTruong; }
+    public double getDiemChuan() { return diemChuan; }
+
     public void xetTuyen(ThiSinh ts) {
         if (ts.tinhDiemXetTuyen() >= diemChuan && !ts.kiemTraDiemLiet()) {
-            System.out.println("Chuc mung ban " + ts.getHoTen() + " da trung tuyen");
+            System.out.println("Chuc mung ban " + ts.getHoTen() + " da trung tuyen vao " + tenTruong);
         } else {
-            System.out.println("Rat tiec, ban " + ts.getHoTen() + " chua du dieu kien trung tuyen");
+            System.out.println("Rat tiec, ban " + ts.getHoTen() + " chua du dieu kien vao " + tenTruong);
         }
     }
 }
